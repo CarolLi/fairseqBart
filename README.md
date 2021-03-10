@@ -15,7 +15,9 @@ Model | Description | # params | Download
 
 ### CNNDM dataset
 
-```wget https://s3.amazonaws.com/datasets.huggingface.co/summarization/cnn_dm_v2.tgz```
+```bash 
+wget https://s3.amazonaws.com/datasets.huggingface.co/summarization/cnn_dm_v2.tgz
+```
 
 
 ## Installation
@@ -23,14 +25,18 @@ Model | Description | # params | Download
 - Download and unzip [CoreNLP 4.2.0](https://nlp.stanford.edu/software/stanford-corenlp-latest.zip)
 - Download model jar [English 4.2.0](https://nlp.stanford.edu/software/stanford-corenlp-4.2.0-models-english.jar)
 - Move the jar to the distribution directory. 
-    ```mv /path/to/stanford-corenlp-4.2.0-models-french.jar /path/to/stanford-corenlp-4.2.0```
+    ```bash
+    mv /path/to/stanford-corenlp-4.2.0-models-french.jar /path/to/stanford-corenlp-4.2.0
+    ```
 - Include the distribution directory in your CLASSPATH. 
-    ```export CLASSPATH=$CLASSPATH:/path/to/stanford-corenlp-4.2.0/*:```
+    ```bash
+    export CLASSPATH=$CLASSPATH:/path/to/stanford-corenlp-4.2.0/*:
+    ```
 
 ### files2rouge
 For calculating rouge, install `files2rouge` from [here](https://github.com/pltrdy/files2rouge).
-Make sure to use pltrdy/pyrouge, if not, some errors will occur.
-Or if you are using bheinzerling/pyrouge, you can comment out the second and third parameters in **files2rouge.py** before setting up.
+Make sure to use `pltrdy/pyrouge`, if not, some errors will occur.
+Or if you are using `bheinzerling/pyrouge`, you can comment out the second and third parameters in **files2rouge.py** before setting up.
 
 
 ## Implementation
@@ -45,4 +51,6 @@ python summarize.py \
   --out cnn_cln/test.hypo
 ```
 ### Evaluate
-```sh evaluate.sh```
+```bash
+sh evaluate.sh
+```
