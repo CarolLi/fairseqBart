@@ -38,6 +38,10 @@ For calculating rouge, install `files2rouge` from [here](https://github.com/pltr
 Make sure to use `pltrdy/pyrouge`, if not, some errors will occur.
 Or if you are using `bheinzerling/pyrouge`, you can comment out the second and third parameters in **files2rouge.py** before setting up.
 
+### fairseq
+```bash
+pip install fairseq
+```
 
 ## Implementation
 ### Summarize
